@@ -4,7 +4,7 @@
 
 | Item | Where |
 | --- | --- |
-| Source code | This folder (`ajaia-docs/`) |
+| Source code | This folder, and on GitHub at https://github.com/muzammil5539/ajaia-collab-docs |
 | Local setup and run instructions | [README.md](README.md) |
 | Architecture note | [ARCHITECTURE.md](ARCHITECTURE.md) |
 | AI workflow note | [AI-WORKFLOW.md](AI-WORKFLOW.md) |
