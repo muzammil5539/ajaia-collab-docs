@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafaf8;
+  --foreground: #16181a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: #16181a;
+  --color-muted: #4a5250;
+  --color-line: #d9ddd6;
+  --color-surface: #ffffff;
+  --color-accent: #0f5e5a;
+  --color-accent-dark: #0a3f3c;
+  --color-accent-soft: #e3eeec;
+  --font-sans: var(--font-plex-sans);
+  --font-serif: var(--font-plex-serif);
+  --font-mono: var(--font-plex-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-plex-sans), system-ui, sans-serif;
+}
+
+/* The document surface. TipTap renders plain HTML, so the document's own
+   styling lives here rather than in the editor configuration. */
+.document-surface :where(h1) {
+  font-family: var(--font-plex-serif), Georgia, serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.6rem;
+}
+
+.document-surface :where(h2) {
+  font-family: var(--font-plex-serif), Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1.2rem 0 0.5rem;
+}
+
+.document-surface :where(h3) {
+  font-family: var(--font-plex-serif), Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 1rem 0 0.4rem;
+}
+
+.document-surface :where(p) {
+  margin: 0.55rem 0;
+  line-height: 1.7;
+}
+
+.document-surface :where(ul) {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin: 0.55rem 0;
+}
+
+.document-surface :where(ol) {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  margin: 0.55rem 0;
+}
+
+.document-surface :where(li) {
+  margin: 0.2rem 0;
+  line-height: 1.7;
+}
+
+.document-surface :where(blockquote) {
+  border-left: 3px solid var(--color-line, #d9ddd6);
+  padding-left: 0.9rem;
+  color: #3a4240;
+  margin: 0.8rem 0;
+}
+
+.document-surface :where(.ProseMirror) {
+  outline: none;
+  min-height: 24rem;
+}
+
+.document-surface :where(.ProseMirror p.is-editor-empty:first-child::before) {
+  content: attr(data-placeholder);
+  color: #8a9290;
+  float: left;
+  height: 0;
+  pointer-events: none;
 }
