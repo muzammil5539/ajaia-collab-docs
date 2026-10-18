@@ -13,7 +13,7 @@
 | Seeded review accounts | README, *Seeded accounts* |
 | Screenshots and demo GIF | `docs/screenshots/` and `docs/demo.gif`, shown in the README |
 | Live product URL | **Not yet deployed** — see below |
-| Walkthrough video URL | **Not yet recorded** — see below |
+| Walkthrough video URL | [**Google Drive**](https://drive.google.com/file/d/1_jvYDk8smrwYxV38GVD-yYs1oJhfdrxo/view?usp=sharing) |
 
 ## Review credentials
 
